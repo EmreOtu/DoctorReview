@@ -11,6 +11,7 @@ module DoctorReview {
     exports com.gp.doctorreview.Controllers.Doctor;
     exports com.gp.doctorreview.Controllers.Admin;
     exports com.gp.doctorreview.Controllers.Patient;
+    exports com.gp.doctorreview.Controllers.General;
     exports com.gp.doctorreview.Models;
     exports com.gp.doctorreview.Views;
 

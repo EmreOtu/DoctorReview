@@ -1,0 +1,37 @@
+/* Header Styles */
+.header {
+    -fx-background-color: #F5F7F8;
+}
+
+.header_label_holder {
+    -fx-background-color: #F5F7F8;
+    -fx-spacing: 60;
+    -fx-alignment: center_right;
+}
+
+.header_label_holder Label {
+    -fx-font-size: 25;
+    -fx-font-family: Inter;
+    -fx-text-fill: #17252A;
+}
+
+.header_label_holder Label:hover {
+    -fx-text-fill: #2B7A78;
+    -fx-underline: true;
+}
+
+.header_label_holder Button {
+    -fx-pref-width: 110;
+    -fx-pref-height: 45;
+    -fx-background-color: #CC0000;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #CC0000;
+    -fx-text-fill: #F5F7F8;
+    -fx-font-family: Inter;
+    -fx-font-size: 18;
+}
+
+.header_label_holder Button FontAwesomeIconView {
+    -fx-fill: #F5F7F8;
+}
