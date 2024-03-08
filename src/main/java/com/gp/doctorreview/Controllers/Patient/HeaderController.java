@@ -1,4 +1,4 @@
-package com.gp.doctorreview.Controllers.General;
+package com.gp.doctorreview.Controllers.Patient;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

@@ -9,18 +9,19 @@
     -fx-alignment: center_right;
 }
 
-.header_label_holder Label {
+.nav_labels {
     -fx-font-size: 25;
     -fx-font-family: Inter;
     -fx-text-fill: #17252A;
+    -fx-background-color: #F5F7F8;
 }
 
-.header_label_holder Label:hover {
+.nav_labels:hover {
     -fx-text-fill: #2B7A78;
     -fx-underline: true;
 }
 
-.header_label_holder Button {
+.logout_btn {
     -fx-pref-width: 110;
     -fx-pref-height: 45;
     -fx-background-color: #CC0000;
@@ -32,6 +33,6 @@
     -fx-font-size: 18;
 }
 
-.header_label_holder Button FontAwesomeIconView {
+.logout_btn FontAwesomeIconView {
     -fx-fill: #F5F7F8;
 }
