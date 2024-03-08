@@ -28,6 +28,7 @@
     -fx-background-radius: 5;
     -fx-border-radius: 5;
     -fx-border-color: #CC0000;
+    -fx-border-width: 3;
     -fx-text-fill: #F5F7F8;
     -fx-font-family: Inter;
     -fx-font-size: 18;

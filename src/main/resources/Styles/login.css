@@ -17,6 +17,7 @@
     -fx-background-color: #F5F7F8;
     -fx-border-color: #17252A;
     -fx-border-radius: 10;
+    -fx-border-width: 2;
     -fx-spacing: 10;
     -fx-padding: 10;
 }
@@ -32,6 +33,7 @@
     -fx-pref-width: 500;
     -fx-background-color: #FEFFFF;
     -fx-border-color: #17252A;
+    -fx-border-width: 2;
     -fx-font-size: 20;
     -fx-prompt-text-fill: #17252A;
     -fx-padding: 5;
@@ -42,6 +44,7 @@
     -fx-pref-width: 500;
     -fx-background-color: #FEFFFF;
     -fx-border-color: #17252A;
+    -fx-border-width: 2;
     -fx-font-size: 20;
     -fx-prompt-text-fill: #17252A;
     -fx-padding: 5;
@@ -55,6 +58,7 @@
     -fx-font-size: 24;
     -fx-border-radius: 5;
     -fx-border-color: #17252A;
+    -fx-border-width: 3;
     -fx-font-weight: bold;
 }
 
@@ -70,6 +74,7 @@
     -fx-text-fill: #F5F7F8;
     -fx-border-color: #CC0000;
     -fx-border-radius: 10;
+    -fx-border-width: 3;
     -fx-background-radius: 10;
 }
 

@@ -28,6 +28,7 @@
 .home_page_nav Button {
     -fx-border-color: #17252A;
     -fx-border-radius: 20;
+    -fx-border-width: 3;
     -fx-focus-traversable: false;
     -fx-background-color: #F5F7F8;
     -fx-pref-width: 550;
@@ -46,6 +47,7 @@
 #profile_btn {
     -fx-background-color: #17252A;
     -fx-border-color: #17252A;
+    -fx-border-width: 3;
     -fx-text-fill: #F5F7F8;
     -fx-border-radius: 20;
 }
