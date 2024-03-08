@@ -62,6 +62,20 @@
     -fx-text-fill: #2B7A78;
 }
 
+#login_form_logout_btn {
+    -fx-pref-width: 550;
+    -fx-pref-height: 60;
+    -fx-background-color: #CC0000;
+    -fx-text-fill: #F5F7F8;
+    -fx-border-color: #CC0000;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+#login_form_logout_btn FontAwesomeIconView {
+    -fx-fill: #F5F7F8;
+}
+
 .error_label {
     -fx-text-fill: #CC0000;
     -fx-font-size: 18;
