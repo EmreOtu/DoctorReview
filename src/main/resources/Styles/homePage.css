@@ -27,9 +27,11 @@
 
 .home_page_nav Button {
     -fx-border-color: #17252A;
+    -fx-border-width: 3;
     -fx-border-radius: 20;
     -fx-focus-traversable: false;
     -fx-background-color: #F5F7F8;
+    -fx-background-radius: 20;
     -fx-pref-width: 550;
     -fx-pref-height: 125;
     -fx-text-fill: #17252A;
@@ -41,17 +43,20 @@
 
 .home_page_nav Button:hover {
     -fx-text-fill: #2B7A78;
+    -fx-effect: dropshadow(three-pass-box, #2B7A78, 5, 0, 0, 2);
 }
 
 #profile_btn {
     -fx-background-color: #17252A;
     -fx-border-color: #17252A;
+    -fx-border-width: 3;
     -fx-text-fill: #F5F7F8;
     -fx-border-radius: 20;
 }
 
 #profile_btn:hover {
     -fx-text-fill: #2B7A78;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
 }
 
 #profile_btn FontAwesomeIconView {
