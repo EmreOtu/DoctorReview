@@ -9,16 +9,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../../Styles/homePage.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gp.doctorreview.Controllers.Patient.HomePageController">
-   <top>
-      <fx:include source="Header.fxml" />
-   </top>
-
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1366.0" stylesheets="@../../Styles/homePage.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gp.doctorreview.Controllers.Patient.HomePageController">
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" styleClass="center_box" BorderPane.alignment="CENTER">
          <HBox prefHeight="350.0" prefWidth="1366.0" styleClass="center_box">
             <VBox.margin>
-               <Insets top="15.0" />
+               <Insets top="5.0" />
             </VBox.margin>
             <ImageView fitHeight="325.0" fitWidth="325.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
