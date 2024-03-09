@@ -1,26 +1,51 @@
 package com.gp.doctorreview.Views;
 
-import javafx.fxml.FXML;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class ViewFactory {
     // Client Settings
+    private final StringProperty patientSelectedHeaderItem;
     private BorderPane homePage;
+    private AnchorPane contactUsPage;
 
-    public ViewFactory(){}
+    public ViewFactory(){
+        this.patientSelectedHeaderItem = new SimpleStringProperty("");
+    }
+
+    /*
+     * User Pages
+     */
+
+    public StringProperty getPatientSelectedHeaderItem(){
+        return patientSelectedHeaderItem;
+    }
 
     public BorderPane getHomePage() {
         if (homePage == null) {
             try {
                 homePage = new FXMLLoader(getClass().getResource("/Fxml/Patient/HomePage.fxml")).load();
             } catch (Exception e) {
-                System.out.println(e.toString());
+                e.fillInStackTrace();
             }
         }
         return homePage;
+    }
+
+    public AnchorPane getContactUsPage() {
+        if (contactUsPage == null) {
+            try {
+                contactUsPage = new FXMLLoader(getClass().getResource("/Fxml/Patient/ContactUs.fxml")).load();
+            } catch (Exception e) {
+                e.fillInStackTrace();
+            }
+        }
+        return contactUsPage;
     }
 
     public void showLoginPage () {
@@ -47,7 +72,7 @@ public class ViewFactory {
         try {
             scene = new Scene(loader.load());
         } catch (Exception e) {
-            System.out.println(e.toString());
+            e.fillInStackTrace();
         }
 
         Stage stage = new Stage();
