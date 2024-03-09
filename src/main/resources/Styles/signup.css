@@ -17,7 +17,6 @@
     -fx-background-color: #F5F7F8;
     -fx-border-color: #17252A;
     -fx-border-radius: 10;
-    -fx-border-width: 2;
     -fx-spacing: 20;
     -fx-padding: 10;
 }
@@ -28,48 +27,44 @@
     -fx-font-family: Inter;
 }
 
-.signup_field {
+.signup_form_container TextField {
     -fx-pref-height: 50;
     -fx-pref-width: 500;
     -fx-background-color: #FEFFFF;
     -fx-border-color: #17252A;
-    -fx-border-width: 2;
     -fx-font-size: 20;
     -fx-prompt-text-fill: #17252A;
     -fx-padding: 5;
     -fx-font-family: Inter;
-    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
 }
 
-.date_selector {
-    -fx-pref-width: 550;
-    -fx-pref-height: 60;
+.signup_form_container PasswordField {
+    -fx-pref-height: 50;
+    -fx-pref-width: 500;
+    -fx-background-color: #FEFFFF;
     -fx-border-color: #17252A;
-    -fx-background-color: #17252A;
     -fx-font-size: 20;
     -fx-prompt-text-fill: #17252A;
+    -fx-padding: 5;
     -fx-font-family: Inter;
-    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
 }
 
-.date_selector .date-picker-popup {
-    -fx-scale-x: 0.9;
-    -fx-scale-y: 0.9;
-}
-
-.date_selector > .arrow-button {
-    -fx-background-color: #17252A;
-    -fx-alignment: center;
-}
-
-.date_selector > .arrow-button .arrow {
-    -fx-fill: #FEFFFF;
+.signup_form_container DatePicker {
+    -fx-pref-height: 50;
+    -fx-pref-width: 550;
     -fx-background-color: #FEFFFF;
-    -fx-scale-x: 1.6;
-    -fx-scale-y: 1.6;
+    -fx-border-color: #17252A;
+    -fx-font-size: 20;
+    -fx-prompt-text-fill: #17252A;
+    -fx-padding: 5;
+    -fx-font-family: Inter;
 }
 
-.signup_button {
+.signup_form_container .month-year-pane {
+    -fx-padding: 10;
+}
+
+.signup_form_container Button {
     -fx-pref-width: 550;
     -fx-pref-height: 50;
     -fx-background-color: #17252A;
@@ -77,14 +72,12 @@
     -fx-font-size: 24;
     -fx-border-radius: 5;
     -fx-border-color: #17252A;
-    -fx-border-width: 3;
     -fx-font-weight: bold;
 }
 
-.signup_button:hover {
+.signup_form_container Button:hover {
     -fx-text-fill: #2B7A78;
     -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
-    -fx-cursor: hand;
 }
 
 #signup_form_logout_btn {
@@ -92,17 +85,13 @@
     -fx-pref-height: 50;
     -fx-background-color: #CC0000;
     -fx-text-fill: #F5F7F8;
-    -fx-font-size: 24;
-    -fx-font-weight: bold;
     -fx-border-color: #CC0000;
     -fx-border-radius: 10;
-    -fx-border-width: 3;
     -fx-background-radius: 10;
 }
 
 #signup_form_logout_btn:hover {
     -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
-    -fx-cursor: hand;
 }
 
 #signup_form_logout_btn FontAwesomeIconView {

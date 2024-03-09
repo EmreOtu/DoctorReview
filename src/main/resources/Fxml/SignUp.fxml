@@ -40,20 +40,20 @@
                   <Insets />
                </VBox.margin>
                 </HBox>
-                <TextField fx:id="name_field" promptText="Full Name *" styleClass="signup_field">
+                <TextField fx:id="name_field" promptText="Full Name *">
                <VBox.margin>
                   <Insets />
                </VBox.margin></TextField>
-            <TextField fx:id="email_field" promptText="Email *" styleClass="signup_field">
+            <TextField fx:id="email_field" promptText="Email *">
                <VBox.margin>
                   <Insets />
                </VBox.margin></TextField>
-                <PasswordField fx:id="password_field" promptText="Password *" styleClass="signup_field">
+                <PasswordField fx:id="password_field" promptText="Password *">
                <VBox.margin>
                   <Insets />
                </VBox.margin></PasswordField>
-            <DatePicker fx:id="date_field" promptText="Date *" showWeekNumbers="true" styleClass="date_selector" />
-                <Button fx:id="create_an_account_btn" mnemonicParsing="false" styleClass="signup_button" text="Create an Account" />
+            <DatePicker fx:id="date_field" promptText="Date *" />
+                <Button fx:id="create_an_account_btn" mnemonicParsing="false" text="Create an Account" />
             <Line endX="250.0" fill="#17252a" stroke="#17252a">
                <VBox.margin>
                   <Insets left="150.0" />
