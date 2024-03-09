@@ -4,6 +4,7 @@ import com.gp.doctorreview.Models.Model;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -23,6 +24,8 @@ public class HeaderController  implements Initializable {
     private void addListeners() {
         home_btn.setOnMouseClicked(mouseEvent -> onHomeBtn());
         contact_us_btn.setOnMouseClicked(mouseEvent -> onContactUsBtn());
+
+        logout_btn.setOnAction(actionEvent -> onLogout());
     }
 
     private void onHomeBtn() {
@@ -31,5 +34,10 @@ public class HeaderController  implements Initializable {
 
     private void onContactUsBtn() {
         Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set("ContactUs");
+    }
+
+    private void onLogout() {
+        Stage stage = (Stage) home_btn.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
     }
 }
