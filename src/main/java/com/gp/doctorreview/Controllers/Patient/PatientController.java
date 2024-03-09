@@ -16,6 +16,7 @@ public class PatientController implements Initializable {
                 .addListener((observableValue, oldVal, newVal) -> {
                     switch (newVal) {
                         case "ContactUs" -> patient_parent.setCenter(Model.getInstance().getViewFactory().getContactUsPage());
+                        case "Doctors" -> patient_parent.setCenter(Model.getInstance().getViewFactory().getDoctorsPage());
                         default -> patient_parent.setCenter(Model.getInstance().getViewFactory().getHomePage());
                     }
                 });
