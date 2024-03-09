@@ -43,7 +43,8 @@
 
 .home_page_nav Button:hover {
     -fx-text-fill: #2B7A78;
-    -fx-effect: dropshadow(three-pass-box, #2B7A78, 5, 0, 0, 2);
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-cursor: hand;
 }
 
 #profile_btn {
@@ -57,6 +58,7 @@
 #profile_btn:hover {
     -fx-text-fill: #2B7A78;
     -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-cursor: hand;
 }
 
 #profile_btn FontAwesomeIconView {

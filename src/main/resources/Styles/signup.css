@@ -28,7 +28,7 @@
     -fx-font-family: Inter;
 }
 
-.signup_text_field {
+.signup_field {
     -fx-pref-height: 50;
     -fx-pref-width: 500;
     -fx-background-color: #FEFFFF;
@@ -38,18 +38,7 @@
     -fx-prompt-text-fill: #17252A;
     -fx-padding: 5;
     -fx-font-family: Inter;
-}
-
-.signup_password {
-    -fx-pref-height: 50;
-    -fx-pref-width: 500;
-    -fx-background-color: #FEFFFF;
-    -fx-border-color: #17252A;
-    -fx-border-width: 2;
-    -fx-font-size: 20;
-    -fx-prompt-text-fill: #17252A;
-    -fx-padding: 5;
-    -fx-font-family: Inter;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
 }
 
 .date_selector {
@@ -60,6 +49,7 @@
     -fx-font-size: 20;
     -fx-prompt-text-fill: #17252A;
     -fx-font-family: Inter;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
 }
 
 .date_selector .date-picker-popup {
@@ -94,6 +84,7 @@
 .signup_button:hover {
     -fx-text-fill: #2B7A78;
     -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-cursor: hand;
 }
 
 #signup_form_logout_btn {
@@ -111,6 +102,7 @@
 
 #signup_form_logout_btn:hover {
     -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-cursor: hand;
 }
 
 #signup_form_logout_btn FontAwesomeIconView {

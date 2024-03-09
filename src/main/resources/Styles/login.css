@@ -37,6 +37,7 @@
     -fx-font-size: 20;
     -fx-prompt-text-fill: #17252A;
     -fx-padding: 5;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
 }
 
 .login_form_container PasswordField {
@@ -48,6 +49,7 @@
     -fx-font-size: 20;
     -fx-prompt-text-fill: #17252A;
     -fx-padding: 5;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
 }
 
 .login_form_container Button {
@@ -65,6 +67,7 @@
 .login_form_container Button:hover {
     -fx-text-fill: #2B7A78;
     -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-cursor: hand;
 }
 
 #login_form_logout_btn {
@@ -80,6 +83,7 @@
 
 #login_form_logout_btn:hover {
     -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-cursor: hand;
 }
 
 #login_form_logout_btn FontAwesomeIconView {
