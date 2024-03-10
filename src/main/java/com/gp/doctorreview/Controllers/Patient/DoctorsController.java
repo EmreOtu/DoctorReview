@@ -1,5 +1,6 @@
 package com.gp.doctorreview.Controllers.Patient;
 
+import com.gp.doctorreview.Models.Model;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
@@ -19,6 +20,14 @@ public class DoctorsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        addListeners();
+    }
 
+    private void addListeners() {
+        search_btn.setOnAction(actionEvent -> onDoctorDetail());
+    }
+
+    private void onDoctorDetail() {
+        Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set("DoctorDetail");
     }
 }
