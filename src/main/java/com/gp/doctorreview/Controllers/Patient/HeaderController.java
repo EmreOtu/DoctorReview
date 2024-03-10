@@ -25,6 +25,7 @@ public class HeaderController  implements Initializable {
         home_btn.setOnMouseClicked(mouseEvent -> onHomeBtn());
         contact_us_btn.setOnMouseClicked(mouseEvent -> onContactUsBtn());
         doctors_btn.setOnMouseClicked(mouseEvent -> onDoctorsBtn());
+        profile_btn.setOnMouseClicked(mouseEvent -> onProfileBtn());
 
         logout_btn.setOnAction(actionEvent -> onLogout());
     }
@@ -39,6 +40,10 @@ public class HeaderController  implements Initializable {
 
     private void onDoctorsBtn() {
         Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set("Doctors");
+    }
+
+    private void onProfileBtn() {
+        Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set("Profile");
     }
 
     private void onLogout() {

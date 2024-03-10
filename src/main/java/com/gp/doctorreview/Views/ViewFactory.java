@@ -15,6 +15,7 @@ public class ViewFactory {
     private AnchorPane contactUsPage;
     private AnchorPane doctorsPage;
     private AnchorPane doctorDetailPage;
+    private AnchorPane profilePage;
 
     public ViewFactory(){
         this.patientSelectedHeaderItem = new SimpleStringProperty("");
@@ -70,6 +71,17 @@ public class ViewFactory {
             }
         }
         return doctorDetailPage;
+    }
+
+    public AnchorPane getProfilePage() {
+        if (profilePage == null) {
+            try {
+                profilePage = new FXMLLoader(getClass().getResource("/Fxml/Patient/Profile.fxml")).load();
+            } catch (Exception e) {
+                e.fillInStackTrace();
+            }
+        }
+        return profilePage;
     }
 
     public void showLoginPage () {
