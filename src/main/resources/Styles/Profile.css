@@ -110,6 +110,7 @@
     -fx-fill: #F5F7F8;
     -fx-font-family: Inter;
     -fx-font-weight: bold;
+    -fx-font-size: 20;
 }
 
 .user_change_form_body {
@@ -125,10 +126,10 @@
 
 .user_change_form_body TextField {
     -fx-pref-width: 350;
-    -fx-pref-height: 50;
+    -fx-pref-height: 40;
     -fx-background-color: #F5F7F8;
     -fx-text-fill: #17252A;
-    -fx-font-size: 15;
+    -fx-font-size: 14;
     -fx-font-family: Inter;
     -fx-border-color: #17252A;
     -fx-prompt-text-fill: #17252A;

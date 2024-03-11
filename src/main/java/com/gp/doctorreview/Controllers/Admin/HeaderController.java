@@ -1,8 +1,11 @@
 package com.gp.doctorreview.Controllers.Admin;
 
+import com.gp.doctorreview.Models.Model;
+import com.gp.doctorreview.Views.AdminHeaderOptions;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +19,28 @@ public class HeaderController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        addListeners();
+    }
 
+    private void addListeners() {
+        home_btn.setOnMouseClicked(mouseEvent -> onHomePage());
+
+        doctors_btn.setOnMouseClicked(mouseEvent -> onDoctorsPage());
+
+        logout_btn.setOnAction(actionEvent -> onLogout());
+    }
+
+    private void onHomePage() {
+        Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.HOME_PAGE);
+    }
+
+    private void onDoctorsPage() {
+        Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.DOCTORS_PAGE);
+    }
+
+    private void onLogout() {
+        Stage stage = (Stage) home_btn.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showLoginPage();
     }
 }

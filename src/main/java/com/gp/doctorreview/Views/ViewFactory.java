@@ -1,7 +1,9 @@
 package com.gp.doctorreview.Views;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import com.gp.doctorreview.Controllers.Admin.AdminController;
+import com.gp.doctorreview.Controllers.Patient.PatientController;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -9,25 +11,32 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class ViewFactory {
-    // Client Settings
-    private final StringProperty patientSelectedHeaderItem;
+    // Patient Settings
+    private final ObjectProperty<PatientHeaderOptions> patientSelectedHeaderItem;
     private BorderPane homePage;
     private AnchorPane contactUsPage;
     private AnchorPane doctorsPage;
     private AnchorPane doctorDetailPage;
     private AnchorPane profilePage;
 
+    // Admin Settings
+    private final ObjectProperty<AdminHeaderOptions> adminSelectedHeaderItem;
+    private BorderPane adminHomePage;
+    private AnchorPane adminDoctorPage;
+
     public ViewFactory(){
-        this.patientSelectedHeaderItem = new SimpleStringProperty("");
+        this.patientSelectedHeaderItem = new SimpleObjectProperty<>();
+        this.adminSelectedHeaderItem = new SimpleObjectProperty<>();
     }
 
     /*
      * User Pages
      */
 
-    public StringProperty getPatientSelectedHeaderItem(){
+    public ObjectProperty<PatientHeaderOptions> getPatientSelectedHeaderItem(){
         return patientSelectedHeaderItem;
     }
+    public ObjectProperty<AdminHeaderOptions> getAdminSelectedHeaderItem() { return adminSelectedHeaderItem; }
 
     public BorderPane getHomePage() {
         if (homePage == null) {
@@ -84,6 +93,32 @@ public class ViewFactory {
         return profilePage;
     }
 
+    /*
+     * Admin Pages
+     */
+    public BorderPane getAdminHomePage() {
+        if (adminHomePage == null) {
+            try {
+                adminHomePage = new FXMLLoader(getClass().getResource("/Fxml/Admin/HomePage.fxml")).load();
+            } catch (Exception e) {
+                e.fillInStackTrace();
+            }
+        }
+        return adminHomePage;
+    }
+
+    public AnchorPane getAdminDoctorPage() {
+        if (adminDoctorPage == null) {
+            try {
+                adminDoctorPage = new FXMLLoader(getClass().getResource("/Fxml/Admin/Doctors.fxml")).load();
+            } catch (Exception e) {
+                e.fillInStackTrace();
+            }
+        }
+        return adminDoctorPage;
+    }
+
+
     public void showLoginPage () {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
         createStage(loader);
@@ -96,6 +131,17 @@ public class ViewFactory {
 
     public void showClientHomePage() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Patient/Patient.fxml"));
+        PatientController controller = new PatientController();
+        loader.setController(controller);
+
+        createStage(loader);
+    }
+
+    public void showAdminHomePage() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/Admin.fxml"));
+        AdminController controller = new AdminController();
+        loader.setController(controller);
+
         createStage(loader);
     }
 

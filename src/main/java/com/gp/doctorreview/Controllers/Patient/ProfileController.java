@@ -20,6 +20,8 @@ public class ProfileController implements Initializable {
     public TextField postcode_fld;
     public Button change_btn;
     public Label err_msg;
+    public TextField current_password_fld;
+    public TextField new_password_fld;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

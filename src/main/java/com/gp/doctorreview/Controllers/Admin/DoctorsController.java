@@ -1,7 +1,5 @@
-package com.gp.doctorreview.Controllers.Patient;
+package com.gp.doctorreview.Controllers.Admin;
 
-import com.gp.doctorreview.Models.Model;
-import com.gp.doctorreview.Views.PatientHeaderOptions;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
@@ -18,17 +16,10 @@ public class DoctorsController implements Initializable {
     public RadioButton review_asc;
     public RadioButton review_desc;
     public ListView doctor_cards_listview;
+    public Button add_doctor_btn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        addListeners();
-    }
 
-    private void addListeners() {
-        search_btn.setOnAction(actionEvent -> onDoctorDetail());
-    }
-
-    private void onDoctorDetail() {
-        Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set(PatientHeaderOptions.DOCTOR_DETAILS_PAGE);
     }
 }

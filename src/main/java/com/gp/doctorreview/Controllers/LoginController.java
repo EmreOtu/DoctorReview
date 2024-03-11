@@ -30,7 +30,14 @@ public class LoginController implements Initializable {
     private void onLogin() {
         Stage stage = (Stage) error_msg.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
-        Model.getInstance().getViewFactory().showClientHomePage();
+
+        if("admin".equals(email_field.getText())) {
+            Model.getInstance().getViewFactory().showAdminHomePage();
+        } else {
+            Model.getInstance().getViewFactory().showClientHomePage();
+        }
+
+
     }
 
     private void onCreateAccount() {

@@ -15,10 +15,10 @@ public class PatientController implements Initializable {
         Model.getInstance().getViewFactory().getPatientSelectedHeaderItem()
                 .addListener((observableValue, oldVal, newVal) -> {
                     switch (newVal) {
-                        case "ContactUs" -> patient_parent.setCenter(Model.getInstance().getViewFactory().getContactUsPage());
-                        case "Doctors" -> patient_parent.setCenter(Model.getInstance().getViewFactory().getDoctorsPage());
-                        case "DoctorDetail" -> patient_parent.setCenter(Model.getInstance().getViewFactory().getDoctorDetailPage());
-                        case "Profile" -> patient_parent.setCenter(Model.getInstance().getViewFactory().getProfilePage());
+                        case CONTACT_US_PAGE -> patient_parent.setCenter(Model.getInstance().getViewFactory().getContactUsPage());
+                        case DOCTORS_PAGE -> patient_parent.setCenter(Model.getInstance().getViewFactory().getDoctorsPage());
+                        case DOCTOR_DETAILS_PAGE -> patient_parent.setCenter(Model.getInstance().getViewFactory().getDoctorDetailPage());
+                        case PROFILE_PAGE -> patient_parent.setCenter(Model.getInstance().getViewFactory().getProfilePage());
                         default -> patient_parent.setCenter(Model.getInstance().getViewFactory().getHomePage());
                     }
                 });

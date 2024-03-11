@@ -1,6 +1,7 @@
 package com.gp.doctorreview.Controllers.Patient;
 
 import com.gp.doctorreview.Models.Model;
+import com.gp.doctorreview.Views.PatientHeaderOptions;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -31,23 +32,24 @@ public class HeaderController  implements Initializable {
     }
 
     private void onHomeBtn() {
-        Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set("Home");
+        Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set(PatientHeaderOptions.HOME_PAGE);
     }
 
     private void onContactUsBtn() {
-        Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set("ContactUs");
+        Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set(PatientHeaderOptions.CONTACT_US_PAGE);
     }
 
     private void onDoctorsBtn() {
-        Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set("Doctors");
+        Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set(PatientHeaderOptions.DOCTORS_PAGE);
     }
 
     private void onProfileBtn() {
-        Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set("Profile");
+        Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set(PatientHeaderOptions.PROFILE_PAGE);
     }
 
     private void onLogout() {
         Stage stage = (Stage) home_btn.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showLoginPage();
     }
 }

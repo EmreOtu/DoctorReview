@@ -52,6 +52,8 @@
          <TextField fx:id="dob_fld" promptText="Date of Birth *" />
          <TextField fx:id="address_line_fld" promptText="Address Line 1" />
          <TextField fx:id="postcode_fld" promptText="Postcode" />
+         <TextField fx:id="current_password_fld" promptText="Current Password *" />
+         <TextField fx:id="new_password_fld" promptText="New Password" />
             <Button fx:id="change_btn" mnemonicParsing="false" text="Change" />
             <Label fx:id="err_msg" styleClass="err_msg" text="Error: &lt;Message&gt;" />
         </VBox>

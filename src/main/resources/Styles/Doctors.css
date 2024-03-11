@@ -97,3 +97,21 @@
 .doctor_sorting_container RadioButton FontAwesomeIconView {
     -fx-fill: #17252A;
 }
+
+/* Add Doctor Button */
+.add_doctor_btn {
+    -fx-background-color: #3AAFA9;
+    -fx-background-radius: 5;
+    -fx-border-color: #2B7A78;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-font-size: 15;
+    -fx-font-family: Inter;
+    -fx-font-weight: bold;
+    -fx-text-fill: #17252A;
+}
+
+.add_doctor_btn:hover {
+    -fx-effect: dropshadow(three-pass-box, #17252AB5, 3, 0, 0, 3);
+    -fx-cursor: hand;
+}
