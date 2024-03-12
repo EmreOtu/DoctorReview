@@ -27,6 +27,7 @@ public class ViewFactory {
     private AnchorPane adminDoctorDetailsPage;
     private AnchorPane adminProfilePage;
     private AnchorPane adminManageUserPage;
+    private AnchorPane adminManageDoctorPage;
 
     public ViewFactory(){
         this.patientSelectedHeaderItem = new SimpleObjectProperty<>();
@@ -153,6 +154,17 @@ public class ViewFactory {
             }
         }
         return adminProfilePage;
+    }
+
+    public AnchorPane getAdminManageDoctorPage() {
+        if (adminManageDoctorPage == null) {
+            try {
+                adminManageDoctorPage = new FXMLLoader(getClass().getResource("/Fxml/Admin/ManageDoctors.fxml")).load();
+            } catch (Exception e) {
+                e.fillInStackTrace();
+            }
+        }
+        return adminManageDoctorPage;
     }
 
     public AnchorPane getAdminManageUserPage() {

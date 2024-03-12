@@ -4,7 +4,7 @@
 
 .manage_page VBox {
     -fx-background-color: #F5F7F8;
-    -fx-alignment: left_center;
+    -fx-alignment: center_left;
     -fx-spacing: 15;
     -fx-padding: 10 20 0 20;
 }
