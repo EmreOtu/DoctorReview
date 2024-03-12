@@ -178,3 +178,23 @@
     -fx-background-color: #F5F7F8;
     -fx-background-radius: 10 10 0 0;
 }
+
+/* Admin */
+#delete_doctor {
+    -fx-pref-width: 350;
+    -fx-pref-height: 50;
+    -fx-background-color: #F5F7F8;
+    -fx-background-radius: 5;
+    -fx-text-fill: #CC0000;
+    -fx-font-size: 15;
+    -fx-font-family: Inter;
+    -fx-font-weight: bold;
+    -fx-border-color: #CC0000;
+    -fx-border-radius: 5;
+    -fx-border-width: 2;
+}
+
+#delete_doctor:hover {
+    -fx-effect: dropshadow(three-pass-box, #17252A, 3, 0, 0, 3);
+    -fx-cursor: hand;
+}

@@ -1,5 +1,7 @@
 package com.gp.doctorreview.Controllers.Admin;
 
+import com.gp.doctorreview.Models.Model;
+import com.gp.doctorreview.Views.AdminHeaderOptions;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
@@ -20,6 +22,14 @@ public class DoctorsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        addListeners();
+    }
 
+    private void addListeners() {
+        add_doctor_btn.setOnAction(actionEvent -> onDoctorDetails());
+    }
+
+    private void onDoctorDetails() {
+        Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.DOCTORS_DETAILS_PAGE);
     }
 }
