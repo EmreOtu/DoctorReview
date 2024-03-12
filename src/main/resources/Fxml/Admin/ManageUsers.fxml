@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="670.0" prefWidth="1366.0" styleClass="manage_page" stylesheets="@../../Styles/ManagePages.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gp.doctorreview.Controllers.Admin.ManageUsersController">
+    <TableView fx:id="user_table" layoutX="61.0" layoutY="56.0" prefHeight="350.0" prefWidth="1166.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
+      <columns>
+          <TableColumn prefWidth="49.5999755859375" text="ID" />
+          <TableColumn minWidth="0.0" prefWidth="164.00001525878906" text="Name" />
+          <TableColumn minWidth="0.0" prefWidth="111.20001220703125" text="Role" />
+          <TableColumn minWidth="0.0" prefWidth="220.0" text="Email" />
+          <TableColumn minWidth="0.0" prefWidth="161.5999755859375" text="Password" />
+          <TableColumn minWidth="0.0" prefWidth="153.60003662109375" text="DateOfBirth" />
+          <TableColumn minWidth="0.0" prefWidth="180.0" text="AddressLine1" />
+          <TableColumn minWidth="0.0" prefWidth="125.5999755859375" text="Postcode" />
+      </columns>
+    </TableView>
+    <VBox layoutX="100.0" layoutY="388.0" prefHeight="270.0" prefWidth="382.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="100.0">
+        <TextField fx:id="id_fld" promptText="ID *" />
+        <TextField fx:id="name_fld" promptText="Name *" />
+        <TextField fx:id="role_fld" promptText="Role *" />
+        <TextField fx:id="email_fld" promptText="Email *" />
+    </VBox>
+    <VBox layoutX="492.0" layoutY="379.0" prefHeight="270.0" prefWidth="382.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="492.0">
+        <TextField fx:id="password_fld" promptText="Password *" />
+        <TextField fx:id="dob_fld" promptText="Date of Birth *" />
+        <TextField fx:id="address_line_fld" promptText="Address Line 1 *" />
+        <TextField fx:id="postcode_fld" promptText="Postcode *" />
+    </VBox>
+    <VBox layoutX="502.0" layoutY="390.0" prefHeight="270.0" prefWidth="382.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="100.0">
+        <Button fx:id="add_user_btn" mnemonicParsing="false" text="Add User" />
+        <Button fx:id="update_user_btn" mnemonicParsing="false" text="Update User" />
+        <Button id="delete_btn" fx:id="delete_user_btn" mnemonicParsing="false" text="Delete User" />
+      <Label fx:id="err_msg" styleClass="err_msg" text="Error: &lt;Message&gt;" />
+    </VBox>
+</AnchorPane>
