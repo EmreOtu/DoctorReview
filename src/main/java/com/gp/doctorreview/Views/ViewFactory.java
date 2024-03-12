@@ -22,6 +22,7 @@ public class ViewFactory {
     // Admin Settings
     private final ObjectProperty<AdminHeaderOptions> adminSelectedHeaderItem;
     private BorderPane adminHomePage;
+    private AnchorPane adminMessagesPage;
     private AnchorPane adminDoctorPage;
 
     public ViewFactory(){
@@ -116,6 +117,17 @@ public class ViewFactory {
             }
         }
         return adminDoctorPage;
+    }
+
+    public AnchorPane getAdminMessagesPage() {
+        if (adminMessagesPage == null) {
+            try {
+                adminMessagesPage = new FXMLLoader(getClass().getResource("/Fxml/Admin/Messages.fxml")).load();
+            } catch (Exception e) {
+                e.fillInStackTrace();
+            }
+        }
+        return adminMessagesPage;
     }
 
 

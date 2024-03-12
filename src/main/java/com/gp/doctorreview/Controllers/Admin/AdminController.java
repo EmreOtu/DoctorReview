@@ -15,6 +15,7 @@ public class AdminController implements Initializable {
         Model.getInstance().getViewFactory().getAdminSelectedHeaderItem()
                 .addListener((observableValue, oldVal, newVal) -> {
                     switch (newVal) {
+                        case MESSAGES_PAGE -> admin_parent.setCenter(Model.getInstance().getViewFactory().getAdminMessagesPage());
                         case DOCTORS_PAGE -> admin_parent.setCenter(Model.getInstance().getViewFactory().getAdminDoctorPage());
                         default -> admin_parent.setCenter(Model.getInstance().getViewFactory().getAdminHomePage());
                     }

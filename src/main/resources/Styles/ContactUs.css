@@ -75,8 +75,32 @@
 }
 
 .err_msg {
-    -fx-text-fill: CC0000;
+    -fx-text-fill: #CC0000;
     -fx-font-family: Inter;
     -fx-font-size: 15;
     -fx-font-weight: bold;
+}
+
+/* Admin Settings */
+#msg_delete_btn {
+    -fx-background-color: #F5F7F8;
+    -fx-background-radius: 10;
+    -fx-border-color: #CC0000;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-pref-width: 450;
+    -fx-pref-height: 60;
+    -fx-text-fill: #CC0000;
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-font-family: Inter;
+}
+
+#msg_delete_btn:hover {
+    -fx-effect: dropshadow(three-pass-box, #CC0000, 3, 0, 0, 3);
+    -fx-cursor: hand;
+}
+
+.messages_listview {
+    -fx-background-color: #F5F7F8;
 }

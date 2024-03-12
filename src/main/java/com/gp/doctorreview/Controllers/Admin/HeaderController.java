@@ -24,7 +24,7 @@ public class HeaderController implements Initializable {
 
     private void addListeners() {
         home_btn.setOnMouseClicked(mouseEvent -> onHomePage());
-
+        messages_btn.setOnMouseClicked(mouseEvent -> onMessagesPage());
         doctors_btn.setOnMouseClicked(mouseEvent -> onDoctorsPage());
 
         logout_btn.setOnAction(actionEvent -> onLogout());
@@ -32,6 +32,10 @@ public class HeaderController implements Initializable {
 
     private void onHomePage() {
         Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.HOME_PAGE);
+    }
+
+    private void onMessagesPage() {
+        Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.MESSAGES_PAGE);
     }
 
     private void onDoctorsPage() {
