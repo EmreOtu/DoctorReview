@@ -11,8 +11,8 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="670.0" prefWidth="1366.0" styleClass="doctor_details_page" stylesheets="@../../Styles/DoctorsDetail.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gp.doctorreview.Controllers.Admin.DoctorDetailsController">
-    <HBox layoutX="32.0" layoutY="40.0" prefHeight="150.0" prefWidth="780.0" styleClass="doctor_card_container" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="15.0">
-        <VBox prefHeight="200.0" prefWidth="175.0" styleClass="doctor_card_image">
+    <HBox layoutX="32.0" layoutY="40.0" prefHeight="150.0" prefWidth="800.0" styleClass="doctor_card_container" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="15.0">
+        <VBox prefHeight="200.0" prefWidth="180.0" styleClass="doctor_card_image">
             <FontAwesomeIconView glyphName="STETHOSCOPE" size="75" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor's Details" />
         </VBox>
@@ -20,7 +20,7 @@
             <Label id="doctor_name" fx:id="doctor_name" text="Dr. Michael Smith" />
             <Label id="doctor_spec" fx:id="doctor_spec" text="Orthopedics" />
         </VBox>
-        <VBox prefHeight="200.0" prefWidth="200.0" styleClass="doctor_card_review">
+        <VBox prefHeight="200.0" prefWidth="215.0" styleClass="doctor_card_review">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Review">
                 <VBox.margin>
                     <Insets bottom="10.0" />
@@ -35,12 +35,12 @@
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Doctor Details" />
         </VBox>
         <VBox fillWidth="false" prefHeight="309.0" prefWidth="400.0" styleClass="doctor_form_body">
-            <Button fx:id="change_details_btn" mnemonicParsing="false" text="Change Details"/>
-            <Button id="delete_doctor" fx:id="delete_doctor_btn" mnemonicParsing="false" text="Delete Doctor"/>
+            <Button fx:id="change_details_btn" mnemonicParsing="false" text="Change Details" />
+            <Button id="delete_doctor" fx:id="delete_doctor_btn" mnemonicParsing="false" text="Delete Doctor" />
         </VBox>
     </VBox>
-    <HBox layoutX="40.0" layoutY="211.0" prefHeight="425.0" prefWidth="780.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="40.0">
-        <ListView fx:id="feedbacks" prefHeight="200.0" prefWidth="780.0" styleClass="doctor_feedback_container" />
+    <HBox layoutX="40.0" layoutY="211.0" prefHeight="425.0" prefWidth="800.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="40.0">
+        <ListView fx:id="feedbacks" prefHeight="200.0" prefWidth="800.0" styleClass="doctor_feedback_container" />
     </HBox>
     <Text layoutX="40.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feedbacks" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="40.0" />
 </AnchorPane>
