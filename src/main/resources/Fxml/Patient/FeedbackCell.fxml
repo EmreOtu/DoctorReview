@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="200.0" prefWidth="780.0" styleClass="doctor_card" stylesheets="@../../Styles/DoctorCell.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <Label fx:id="date" layoutX="732.0" layoutY="15.0" text="Date" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+   <VBox prefHeight="200.0" prefWidth="150.0" styleClass="doctor_card_left_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label fx:id="sender_name" text="Sender Name" />
+      <VBox prefHeight="100.0" prefWidth="130.0">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Review Point" />
+         <HBox prefHeight="40.0" prefWidth="130.0">
+            <Label fx:id="review_point" text="4.5/5.0" />
+            <FontAwesomeIconView glyphName="STAR" size="13" />
+         </HBox>
+      </VBox>
+      <Label fx:id="doctor_name" text="Doctor Name" />
+   </VBox>
+   <VBox layoutX="169.0" layoutY="41.0" prefHeight="180.0" prefWidth="630.0" AnchorPane.leftAnchor="150.0">
+      <Label id="feedback_title" fx:id="title" text="Title" wrapText="true" />
+      <Label id="feedback_msg" fx:id="feedback_msg" text="Feedback" wrapText="true" />
+   </VBox>
+</AnchorPane>
