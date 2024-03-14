@@ -21,6 +21,7 @@ public class AdminController implements Initializable {
                         case PROFILE_PAGE -> admin_parent.setCenter(Model.getInstance().getViewFactory().getAdminProfilePage());
                         case MANAGE_USERS -> admin_parent.setCenter(Model.getInstance().getViewFactory().getAdminManageUserPage());
                         case MANAGE_DOCTORS -> admin_parent.setCenter(Model.getInstance().getViewFactory().getAdminManageDoctorPage());
+                        case MANAGE_FEEDBACKS -> admin_parent.setCenter(Model.getInstance().getViewFactory().getAdminManageFeedbacksPage());
                         default -> admin_parent.setCenter(Model.getInstance().getViewFactory().getAdminHomePage());
                     }
                 });

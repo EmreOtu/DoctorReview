@@ -28,6 +28,7 @@ public class ViewFactory {
     private AnchorPane adminProfilePage;
     private AnchorPane adminManageUserPage;
     private AnchorPane adminManageDoctorPage;
+    private AnchorPane adminManageFeedbacksPage;
 
     public ViewFactory(){
         this.patientSelectedHeaderItem = new SimpleObjectProperty<>();
@@ -176,6 +177,17 @@ public class ViewFactory {
             }
         }
         return adminManageUserPage;
+    }
+
+    public AnchorPane getAdminManageFeedbacksPage() {
+        if (adminManageFeedbacksPage == null) {
+            try {
+                adminManageFeedbacksPage = new FXMLLoader(getClass().getResource("/Fxml/Admin/ManageFeedbacks.fxml")).load();
+            } catch (Exception e) {
+                e.fillInStackTrace();
+            }
+        }
+        return adminManageFeedbacksPage;
     }
 
 
