@@ -24,10 +24,10 @@
 .logout_btn {
     -fx-pref-width: 110;
     -fx-pref-height: 45;
-    -fx-background-color: #CC0000;
+    -fx-background-color: #2B7A78;
     -fx-background-radius: 5;
+    -fx-border-color: #2B7A78;
     -fx-border-radius: 5;
-    -fx-border-color: #CC0000;
     -fx-border-width: 3;
     -fx-text-fill: #F5F7F8;
     -fx-font-family: Inter;
@@ -36,6 +36,8 @@
 
 .logout_btn:hover{
     -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-background-color: linear-gradient(to right, #2B7A78, #3AAFA9);
+    -fx-border-color: linear-gradient(to right, #2B7A78, #3AAFA9);
     -fx-cursor: hand;
 }
 
