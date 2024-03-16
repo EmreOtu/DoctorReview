@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+
+
+<AnchorPane prefHeight="60.0" prefWidth="780.0" styleClass="doctor_cell_container"
+            stylesheets="@../../Styles/DoctorCell.css" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.gp.doctorreview.Controllers.General.DoctorCellContainer">
+   <FontAwesomeIconView glyphName="STETHOSCOPE" layoutX="14.0" layoutY="40.0" size="30" AnchorPane.bottomAnchor="15.0"
+                        AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="15.0"/>
+   <HBox layoutX="60.0" layoutY="5.0" prefHeight="50.0" prefWidth="663.0">
+      <Label fx:id="name_lbl" text="Dr. Micheal Smith"/>
+      <Label fx:id="spec_lbl" styleClass="spec_lbl" text="Orthopedics"/>
+      <Line endY="30.0"/>
+      <Label fx:id="review_point_lbl" layoutX="38.0" layoutY="10.0" text="4.5 / 5.0"/>
+      <FontAwesomeIconView glyphName="STAR" size="15">
+         <HBox.margin>
+            <Insets left="-10.0"/>
+         </HBox.margin>
+      </FontAwesomeIconView>
+      <Label fx:id="total_view_lbl" layoutX="38.0" layoutY="10.0" styleClass="total_view_lbl" text="119 Total View"/>
+      <FontAwesomeIconView glyphName="EYE" size="15" styleClass="total_view_icon">
+         <HBox.margin>
+            <Insets left="-10.0"/>
+         </HBox.margin>
+      </FontAwesomeIconView>
+   </HBox>
+   <Button fx:id="delete_btn" layoutX="738.0" layoutY="18.0" mnemonicParsing="false" styleClass="delete_btn"
+           AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="15.0">
+      <graphic>
+         <FontAwesomeIconView glyphName="TRASH" size="18"/>
+      </graphic>
+   </Button>
+</AnchorPane>
