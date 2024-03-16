@@ -25,10 +25,6 @@ public class ViewFactory {
     private AnchorPane adminMessagesPage;
     private AnchorPane adminDoctorPage;
     private AnchorPane adminDoctorDetailsPage;
-    private AnchorPane adminProfilePage;
-    private AnchorPane adminManageUserPage;
-    private AnchorPane adminManageDoctorPage;
-    private AnchorPane adminManageFeedbacksPage;
 
     public ViewFactory(){
         this.patientSelectedHeaderItem = new SimpleObjectProperty<>();
@@ -144,50 +140,6 @@ public class ViewFactory {
             }
         }
         return adminDoctorDetailsPage;
-    }
-
-    public AnchorPane getAdminProfilePage() {
-        if (adminProfilePage == null) {
-            try {
-                adminProfilePage = new FXMLLoader(getClass().getResource("/Fxml/Admin/Profile.fxml")).load();
-            } catch (Exception e) {
-                e.fillInStackTrace();
-            }
-        }
-        return adminProfilePage;
-    }
-
-    public AnchorPane getAdminManageDoctorPage() {
-        if (adminManageDoctorPage == null) {
-            try {
-                adminManageDoctorPage = new FXMLLoader(getClass().getResource("/Fxml/Admin/ManageDoctors.fxml")).load();
-            } catch (Exception e) {
-                e.fillInStackTrace();
-            }
-        }
-        return adminManageDoctorPage;
-    }
-
-    public AnchorPane getAdminManageUserPage() {
-        if (adminManageUserPage == null) {
-            try {
-                adminManageUserPage = new FXMLLoader(getClass().getResource("/Fxml/Admin/ManageUsers.fxml")).load();
-            } catch (Exception e) {
-                e.fillInStackTrace();
-            }
-        }
-        return adminManageUserPage;
-    }
-
-    public AnchorPane getAdminManageFeedbacksPage() {
-        if (adminManageFeedbacksPage == null) {
-            try {
-                adminManageFeedbacksPage = new FXMLLoader(getClass().getResource("/Fxml/Admin/ManageFeedbacks.fxml")).load();
-            } catch (Exception e) {
-                e.fillInStackTrace();
-            }
-        }
-        return adminManageFeedbacksPage;
     }
 
 
