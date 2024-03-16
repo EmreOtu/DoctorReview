@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="200.0" prefWidth="780.0" styleClass="doctor_card" stylesheets="@../../Styles/FeedbackCell.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gp.doctorreview.Controllers.General.FeedbackCellContainer">
+<AnchorPane prefHeight="200.0" prefWidth="780.0" styleClass="doctor_card" stylesheets="@../../Styles/FeedbackCell.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <Label fx:id="date_lbl" layoutX="732.0" layoutY="15.0" text="Date" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
     <VBox prefHeight="200.0" prefWidth="150.0" styleClass="doctor_card_left_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
         <Label fx:id="sender_name" text="Sender Name">
