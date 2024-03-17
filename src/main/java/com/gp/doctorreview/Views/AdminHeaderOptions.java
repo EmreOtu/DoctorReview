@@ -7,6 +7,5 @@ public enum AdminHeaderOptions {
     DOCTORS_DETAILS_PAGE,
     PROFILE_PAGE,
     MANAGE_USERS,
-    MANAGE_DOCTORS,
-    MANAGE_FEEDBACKS
+    MANAGE_DOCTORS
 }

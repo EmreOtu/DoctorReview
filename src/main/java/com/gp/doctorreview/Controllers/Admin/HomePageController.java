@@ -1,5 +1,7 @@
 package com.gp.doctorreview.Controllers.Admin;
 
+import com.gp.doctorreview.Models.Model;
+import com.gp.doctorreview.Views.AdminHeaderOptions;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
@@ -14,6 +16,13 @@ public class HomePageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        addListeners();
+    }
 
+    public void addListeners() {
+        home_page_btn.setOnAction(actionEvent -> Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.HOME_PAGE));
+        messages_btn.setOnAction(actionEvent -> Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.MESSAGES_PAGE));
+        doctors_btn.setOnAction(actionEvent -> Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.DOCTORS_PAGE));
+        profile_btn.setOnAction(actionEvent -> Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.PROFILE_PAGE));
     }
 }

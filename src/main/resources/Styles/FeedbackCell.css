@@ -24,6 +24,14 @@
     -fx-text-fill: #17252A;
     -fx-font-family: "Calibri Light";
     -fx-font-size: 15;
+    -fx-wrap-text: true;
+}
+
+#doctor_name_lbl {
+    -fx-text-fill: #17252A;
+    -fx-font-family: "Calibri Light";
+    -fx-font-size: 15;
+    -fx-wrap-text: true;
 }
 
 /* Review Point Styles */
@@ -55,7 +63,6 @@
 }
 
 /* Feedback Container Styles */
-
 #feedback_title {
     -fx-text-fill: #17252A;
     -fx-font-size: 20;

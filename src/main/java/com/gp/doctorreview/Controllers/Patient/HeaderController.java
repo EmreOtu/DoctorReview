@@ -14,7 +14,6 @@ public class HeaderController  implements Initializable {
     public Label home_btn;
     public Label contact_us_btn;
     public Label doctors_btn;
-    public Label profile_btn;
     public Button logout_btn;
 
     @Override
@@ -26,7 +25,6 @@ public class HeaderController  implements Initializable {
         home_btn.setOnMouseClicked(mouseEvent -> onHomeBtn());
         contact_us_btn.setOnMouseClicked(mouseEvent -> onContactUsBtn());
         doctors_btn.setOnMouseClicked(mouseEvent -> onDoctorsBtn());
-        profile_btn.setOnMouseClicked(mouseEvent -> onProfileBtn());
 
         logout_btn.setOnAction(actionEvent -> onLogout());
     }
@@ -41,10 +39,6 @@ public class HeaderController  implements Initializable {
 
     private void onDoctorsBtn() {
         Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set(PatientHeaderOptions.DOCTORS_PAGE);
-    }
-
-    private void onProfileBtn() {
-        Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set(PatientHeaderOptions.PROFILE_PAGE);
     }
 
     private void onLogout() {

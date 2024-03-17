@@ -54,18 +54,11 @@
                </graphic>
             </Button>
          </HBox>
-         <HBox prefHeight="148.0" prefWidth="1366.0" styleClass="home_page_nav">
+         <HBox alignment="TOP_CENTER" prefHeight="148.0" prefWidth="1366.0" styleClass="home_page_nav">
             <Button fx:id="doctors_btn" mnemonicParsing="false" text="Doctors">
                <graphic>
                   <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@../../Icons/DoctorIcon.png" />
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button id="profile_btn" fx:id="profile_btn" mnemonicParsing="false" text="Profile">
-               <graphic>
-                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
-                     <Image url="@../../Icons/ProfileIcon.png" />
                   </ImageView>
                </graphic>
             </Button>

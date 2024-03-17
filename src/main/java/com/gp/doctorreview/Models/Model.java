@@ -21,10 +21,11 @@ public class Model {
     // General Section
     private final ObservableList<Doctor> doctors;
     private final ObservableList<String> specializations;
-    private final ObservableList<Feedback> userFeedbacks;
     private final ObservableList<Feedback> doctorFeedbacks;
+    private final ObservableList<Message> messages;
 
     private final Doctor selectedDoctor;
+    private final Message selectedMessage;
 
     private Model() {
         this.viewFactory = new ViewFactory();
@@ -36,10 +37,11 @@ public class Model {
         // General Section
         this.doctors = FXCollections.observableArrayList();
         this.specializations = FXCollections.observableArrayList();
-        this.userFeedbacks = FXCollections.observableArrayList();
         this.doctorFeedbacks = FXCollections.observableArrayList();
+        this.messages = FXCollections.observableArrayList();
 
         this.selectedDoctor = new Doctor(0, "", "", 0, 0);
+        this.selectedMessage = new Message(0, 0, "", "", "", "", null);
     }
 
     public static synchronized Model getInstance() {
@@ -172,34 +174,6 @@ public class Model {
         }
     }
 
-    public void setUserFeedbacks(int userID) {
-        ResultSet resultSet = databaseDriver.getUserFeedbacks(userID);
-
-        try {
-            while (resultSet.next()) {
-                int feedbackID = resultSet.getInt("feedbackID");
-                int senderID = resultSet.getInt("senderId");
-                String userName = resultSet.getString("userName");
-                int doctorID = resultSet.getInt("doctorID");
-                String doctorName = resultSet.getString("doctorName");
-
-                String[] dateParts = resultSet.getString("dateSent").split("-");
-                int year = Integer.parseInt(dateParts[0]);
-                int month = Integer.parseInt(dateParts[1]);
-                int day = Integer.parseInt(dateParts[2]);
-                LocalDate dateSent = LocalDate.of(year, month, day);
-
-                String feedbackTitle = resultSet.getString("feedbackTitle");
-                String feedbackMessage = resultSet.getString("feedbackMessage");
-                double rewPoint = resultSet.getDouble("newReviewPoint");
-
-                userFeedbacks.add(new Feedback(feedbackID, senderID, userName, doctorID, doctorName, dateSent, feedbackTitle, feedbackMessage, rewPoint));
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     public void setDoctorFeedbacks(int doctorID) {
         ResultSet resultSet = databaseDriver.getDoctorFeedbacks(doctorID);
 
@@ -227,10 +201,6 @@ public class Model {
         }
     }
 
-    public ObservableList<Feedback> getUserFeedbacks() {
-        return userFeedbacks;
-    }
-
     public ObservableList<Feedback> getDoctorFeedbacks() {
         return doctorFeedbacks;
     }
@@ -254,5 +224,38 @@ public class Model {
 
     public Doctor getSelectedDoctor() {
         return selectedDoctor;
+    }
+
+    public Message getSelectedMessage() {
+        return selectedMessage;
+    }
+
+    public ObservableList<Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages() {
+        ResultSet resultSet = databaseDriver.getAllMessages();
+
+        try {
+            while (resultSet.next()) {
+                int messageID = resultSet.getInt("messageID");
+                int senderID = resultSet.getInt("senderID");
+                String senderName = resultSet.getString("senderName");
+                String senderEmail = resultSet.getString("senderEmail");
+                String messageTitle = resultSet.getString("messageTitle");
+                String message = resultSet.getString("message");
+                String[] dateParts = resultSet.getString("dateSent").split("-");
+
+                int year = Integer.parseInt(dateParts[0]);
+                int month = Integer.parseInt(dateParts[1]);
+                int day = Integer.parseInt(dateParts[2]);
+                LocalDate dateSent = LocalDate.of(year, month, day);
+
+                messages.add(new Message(messageID, senderID, senderName, senderEmail, messageTitle, message, dateSent));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

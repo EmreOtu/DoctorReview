@@ -40,10 +40,11 @@
       <VBox fillWidth="false" prefHeight="570.0" prefWidth="400.0" styleClass="doctor_form_body">
          <TextField fx:id="name_fld" promptText="Name" />
          <TextField fx:id="date_fld" promptText="Date" />
+         <TextField fx:id="feedback_title_fld" promptText="Feedback Title *" />
          <TextArea fx:id="feedback_text_area" prefHeight="200.0" prefWidth="200.0" promptText="Your Feedback *" />
          <Slider fx:id="feedback_slider" blockIncrement="0.1" majorTickUnit="1.0" max="5.0" minorTickCount="5" prefHeight="60.0" prefWidth="350.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="3.8" />
          <Button fx:id="submit_btn" mnemonicParsing="false" text="Submit" />
-         <Label fx:id="err_msg" styleClass="err_msg" text="Error: &lt;Message&gt;" />
+         <Label fx:id="err_msg" styleClass="err_msg" />
       </VBox>
    </VBox>
    <HBox layoutX="40.0" layoutY="211.0" prefHeight="425.0" prefWidth="780.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="40.0">

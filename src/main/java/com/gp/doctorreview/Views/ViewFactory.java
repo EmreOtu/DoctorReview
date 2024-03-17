@@ -17,7 +17,6 @@ public class ViewFactory {
     private AnchorPane contactUsPage;
     private AnchorPane doctorsPage;
     private AnchorPane doctorDetailPage;
-    private AnchorPane profilePage;
 
     // Admin Settings
     private final ObjectProperty<AdminHeaderOptions> adminSelectedHeaderItem;
@@ -26,6 +25,8 @@ public class ViewFactory {
     private AnchorPane adminDoctorPage;
     private AnchorPane adminDoctorDetailsPage;
     private AnchorPane adminProfilePage;
+    private AnchorPane manageUsersPage;
+    private AnchorPane manageDoctorsPage;
 
     public ViewFactory(){
         this.patientSelectedHeaderItem = new SimpleObjectProperty<>();
@@ -85,17 +86,6 @@ public class ViewFactory {
         return doctorDetailPage;
     }
 
-    public AnchorPane getProfilePage() {
-        if (profilePage == null) {
-            try {
-                profilePage = new FXMLLoader(getClass().getResource("/Fxml/Patient/Profile.fxml")).load();
-            } catch (Exception e) {
-                e.fillInStackTrace();
-            }
-        }
-        return profilePage;
-    }
-
     /*
      * Admin Pages
      */
@@ -152,6 +142,28 @@ public class ViewFactory {
             }
         }
         return adminProfilePage;
+    }
+
+    public AnchorPane getManageUsersPage() {
+        if (manageUsersPage == null) {
+            try {
+                manageUsersPage = new FXMLLoader(getClass().getResource("/Fxml/Admin/ManageUsers.fxml")).load();
+            } catch (Exception e) {
+                e.fillInStackTrace();
+            }
+        }
+        return manageUsersPage;
+    }
+
+    public AnchorPane getManageDoctorsPage() {
+        if (manageDoctorsPage == null) {
+            try {
+                manageDoctorsPage = new FXMLLoader(getClass().getResource("/Fxml/Admin/ManageDoctors.fxml")).load();
+            } catch (Exception e) {
+                e.fillInStackTrace();
+            }
+        }
+        return manageDoctorsPage;
     }
 
 

@@ -54,7 +54,7 @@ public class DoctorsController implements Initializable {
     }
 
     private void onDoctorDetails() {
-        Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.DOCTORS_DETAILS_PAGE);
+        Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.MANAGE_DOCTORS);
     }
     private void onSearch() {
         Model.getInstance().filterDoctorsByName(search_bar_fld.getText());

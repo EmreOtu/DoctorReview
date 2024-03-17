@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -15,7 +14,6 @@
         <TextField fx:id="email_fld" promptText="Email *" />
       <TextField fx:id="message_title_fld" promptText="Message Title *" />
         <TextArea fx:id="msg_area" prefHeight="200.0" prefWidth="200.0" promptText="Message Context *" />
-        <Button id="msg_delete_btn" fx:id="delete_btn" mnemonicParsing="false" text="Delete" />
     </VBox>
-   <ListView layoutX="14.0" layoutY="85.0" prefHeight="550.0" prefWidth="700.0" styleClass="messages_listview" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
+   <ListView fx:id="messages_listview" layoutX="14.0" layoutY="85.0" prefHeight="550.0" prefWidth="700.0" styleClass="messages_listview" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
 </AnchorPane>

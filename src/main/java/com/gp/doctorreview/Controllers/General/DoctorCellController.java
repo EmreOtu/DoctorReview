@@ -2,6 +2,7 @@ package com.gp.doctorreview.Controllers.General;
 
 import com.gp.doctorreview.Models.Doctor;
 import com.gp.doctorreview.Models.Model;
+import com.gp.doctorreview.Views.AdminHeaderOptions;
 import com.gp.doctorreview.Views.PatientHeaderOptions;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -37,7 +38,12 @@ public class DoctorCellController implements Initializable {
             Model.getInstance().getSelectedDoctor().reviewPointProperty().set(doctor.reviewPointProperty().get());
             Model.getInstance().getSelectedDoctor().totalViewerProperty().set(doctor.totalViewerProperty().get());
 
-            Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set(PatientHeaderOptions.DOCTOR_DETAILS_PAGE);
+            if (Model.getInstance().getUser().roleProperty().get().equals("PATIENT")){
+                Model.getInstance().getViewFactory().getPatientSelectedHeaderItem().set(PatientHeaderOptions.DOCTOR_DETAILS_PAGE);
+            } else {
+                Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.DOCTORS_DETAILS_PAGE);
+            }
+
         });
 
     }

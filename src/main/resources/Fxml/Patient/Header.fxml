@@ -18,7 +18,6 @@
             <Label fx:id="home_btn" styleClass="nav_labels" text="Home" />
             <Label fx:id="contact_us_btn" styleClass="nav_labels" text="Contact Us" />
             <Label fx:id="doctors_btn" styleClass="nav_labels" text="Doctors" />
-            <Label fx:id="profile_btn" styleClass="nav_labels" text="Profile" />
             <Button fx:id="logout_btn" mnemonicParsing="false" styleClass="logout_btn" text="Logout">
                 <graphic>
                     <FontAwesomeIconView glyphName="EXTERNAL_LINK" />

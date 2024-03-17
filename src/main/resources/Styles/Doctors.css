@@ -23,9 +23,11 @@
     -fx-font-family: Inter;
 }
 
-.specialization_container .list-view {
+.specialization_container > .list-view {
     -fx-border-color: #17252A;
     -fx-border-width: 2;
+    -fx-font-size: 12;
+    -fx-font-family: Inter;
 }
 
 /* Search Bar Styles */

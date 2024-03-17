@@ -18,7 +18,6 @@ public class PatientController implements Initializable {
                         case CONTACT_US_PAGE -> patient_parent.setCenter(Model.getInstance().getViewFactory().getContactUsPage());
                         case DOCTORS_PAGE -> patient_parent.setCenter(Model.getInstance().getViewFactory().getDoctorsPage());
                         case DOCTOR_DETAILS_PAGE -> patient_parent.setCenter(Model.getInstance().getViewFactory().getDoctorDetailPage());
-                        case PROFILE_PAGE -> patient_parent.setCenter(Model.getInstance().getViewFactory().getProfilePage());
                         default -> patient_parent.setCenter(Model.getInstance().getViewFactory().getHomePage());
                     }
                 });
