@@ -35,19 +35,20 @@
     -fx-fill: #2B7A78;
 }
 
-.delete_btn {
-    -fx-background-color: #CC0000;
+.detail_btn {
+    -fx-background-color: #17252A;
     -fx-background-radius: 5;
     -fx-text-fill: #F5F7F8;
-    -fx-border-color: #CC0000;
+    -fx-border-color: #17252A;
     -fx-border-width: 2;
     -fx-border-radius: 5;
+    -fx-pref-height: 40;
 }
 
-.delete_btn FontAwesomeIconView {
+.detail_btn FontAwesomeIconView {
     -fx-fill: #F5F7F8;
 }
 
-.delete_btn:hover {
+.detail_btn:hover {
     -fx-cursor: hand;
 }

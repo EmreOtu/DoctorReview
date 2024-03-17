@@ -25,6 +25,11 @@ public class FeedbackCellController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        date_lbl.textProperty().bind(feedback.dateSentProperty().asString());
+        sender_name.textProperty().bind(feedback.senderNameProperty());
+        review_point.textProperty().bind(feedback.reviewPointProperty().asString());
+        doctor_name.textProperty().bind(feedback.doctorNameProperty());
+        feedback_title.textProperty().bind(feedback.feedbackTitleProperty());
+        feedback_msg.textProperty().bind(feedback.feedbackMessageProperty());
     }
 }

@@ -7,6 +7,7 @@ import java.time.LocalDate;
 public class Feedback {
 
     private final IntegerProperty ID;
+    private final IntegerProperty senderID;
     private final StringProperty senderName;
     private final IntegerProperty doctorID;
     private final StringProperty doctorName;
@@ -15,8 +16,9 @@ public class Feedback {
     private final StringProperty feedbackMessage;
     private final DoubleProperty reviewPoint;
 
-    public Feedback(int ID, String senderName, int doctorID, String doctorName, LocalDate dateSent, String feedbackTitle, String feedbackMessage, double reviewPoint) {
+    public Feedback(int ID, int senderID, String senderName, int doctorID, String doctorName, LocalDate dateSent, String feedbackTitle, String feedbackMessage, double reviewPoint) {
         this.ID = new SimpleIntegerProperty(this, "ID", ID);
+        this.senderID = new SimpleIntegerProperty(this, "senderID", senderID);
         this.senderName = new SimpleStringProperty(this, "SenderName", senderName);
         this.doctorID = new SimpleIntegerProperty(this, "DoctorID", doctorID);
         this.doctorName = new SimpleStringProperty(this, "DoctorName", doctorName);
@@ -28,6 +30,10 @@ public class Feedback {
 
     public IntegerProperty IDProperty() {
         return ID;
+    }
+
+    public IntegerProperty senderIDProperty() {
+        return senderID;
     }
 
     public StringProperty senderNameProperty() {

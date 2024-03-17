@@ -8,9 +8,9 @@
 
 <AnchorPane prefHeight="60.0" prefWidth="770.0" styleClass="doctor_cell_container" stylesheets="@../../Styles/DoctorCell.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <FontAwesomeIconView glyphName="STETHOSCOPE" layoutX="14.0" layoutY="40.0" size="30" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="15.0" />
-   <Button fx:id="delete_btn" layoutX="738.0" layoutY="18.0" mnemonicParsing="false" styleClass="delete_btn" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="15.0">
+   <Button fx:id="see_detail_btn" layoutX="716.0" layoutY="11.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="39.0" styleClass="detail_btn" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.0">
       <graphic>
-         <FontAwesomeIconView glyphName="TRASH" size="18" />
+         <FontAwesomeIconView glyphName="LONG_ARROW_RIGHT" size="18" wrappingWidth="18.0" />
       </graphic>
    </Button>
    <Label fx:id="name_lbl" layoutX="64.0" layoutY="18.0" prefHeight="22.0" prefWidth="142.0" text="Dr. Micheal Smith" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="20.0" />

@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class DoctorsController implements Initializable {
-    public ListView specializations_listview;
+    public ListView<String> specializations_listview;
     public TextField search_bar_fld;
     public Button search_btn;
     public RadioButton name_asc;
@@ -28,19 +28,46 @@ public class DoctorsController implements Initializable {
         initData();
         doctor_cards_listview.setItems(Model.getInstance().getDoctors());
         doctor_cards_listview.setCellFactory(d -> new DoctorCellFactory());
+
+        specializations_listview.setItems(Model.getInstance().getSpecializations());
     }
 
     private void addListeners() {
+        search_btn.setOnAction(actionEvent -> onSearch());
+
         add_doctor_btn.setOnAction(actionEvent -> onDoctorDetails());
+        specializations_listview.setOnMouseClicked(mouseEvent -> Model.getInstance().filterDoctorsBySpec(specializations_listview.getSelectionModel().getSelectedItem()));
+
+        sorting_toggle.selectedToggleProperty().addListener((observableValue, oldVal, newVal) -> {
+            RadioButton selectedRadioButton = (RadioButton) newVal;
+            String radioButtonID = selectedRadioButton.getId();
+
+            switch (radioButtonID) {
+                case "name_asc" -> Model.getInstance().sortDoctorsByNameAsc();
+                case "name_desc" -> Model.getInstance().sortDoctorsByNameDesc();
+                case "review_asc" -> Model.getInstance().sortDoctorsByReviewAsc();
+                default -> Model.getInstance().sortDoctorsByReviewDesc();
+            }
+        });
+
+
     }
 
     private void onDoctorDetails() {
         Model.getInstance().getViewFactory().getAdminSelectedHeaderItem().set(AdminHeaderOptions.DOCTORS_DETAILS_PAGE);
     }
+    private void onSearch() {
+        Model.getInstance().filterDoctorsByName(search_bar_fld.getText());
+    }
 
     private void initData() {
         if (Model.getInstance().getDoctors().isEmpty()) {
             Model.getInstance().setDoctors();
+            Model.getInstance().sortDoctorsByReviewDesc();
+        }
+
+        if (Model.getInstance().getSpecializations().isEmpty()) {
+            Model.getInstance().setSpecializations();
         }
     }
 }

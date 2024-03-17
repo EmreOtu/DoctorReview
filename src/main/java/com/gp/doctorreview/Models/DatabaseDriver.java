@@ -29,6 +29,36 @@ public class DatabaseDriver {
         }
     }
 
+    public ResultSet getUserFeedbacks(int userID) {
+        Statement statement;
+        ResultSet resultSet = null;
+        String query = "SELECT * FROM Feedback WHERE senderId='"+userID+"';";
+
+        try {
+            statement = this.conn.createStatement();
+            resultSet = statement.executeQuery(query);
+        } catch (SQLException e) {
+            System.out.println("Exception");
+        }
+
+        return resultSet;
+    }
+
+    public ResultSet getDoctorFeedbacks(int doctorID) {
+        Statement statement;
+        ResultSet resultSet = null;
+        String query = "SELECT * FROM Feedback WHERE doctorID='"+doctorID+"';";
+
+        try {
+            statement = this.conn.createStatement();
+            resultSet = statement.executeQuery(query);
+        } catch (SQLException e) {
+            System.out.println("Exception");
+        }
+
+        return resultSet;
+    }
+
     // Admin Section
 
     // General Section
@@ -62,7 +92,7 @@ public class DatabaseDriver {
 
     public ResultSet getAllDoctorsData() {
         Statement statement;
-        ResultSet resultSet = null;
+        ResultSet resultSet;
         String query = "SELECT * FROM Doctor";
 
         try {
@@ -71,6 +101,21 @@ public class DatabaseDriver {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return resultSet;
+    }
+
+    // Specialization
+    public ResultSet getDistinctSpec() {
+        Statement statement;
+        ResultSet resultSet = null;
+        String query = "SELECT DISTINCT specialization FROM Doctor;";
+        try {
+            statement = this.conn.createStatement();
+            resultSet = statement.executeQuery(query);
+        } catch (SQLException e) {
+            System.out.println("E");
+        }
+
         return resultSet;
     }
 }
