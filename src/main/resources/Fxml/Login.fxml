@@ -50,7 +50,7 @@
                </VBox.margin>
             </Line>
             <Button id="login_form_logout_btn" fx:id="logout_btn" mnemonicParsing="false" text="Exit" />
-            <Label fx:id="error_msg" styleClass="error_label" text="Error: &lt;Message&gt;">
+            <Label fx:id="error_msg" styleClass="error_label">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin></Label>

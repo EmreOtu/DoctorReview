@@ -23,7 +23,7 @@
     -fx-font-family: Inter;
 }
 
-.specialization_container ListView {
+.specialization_container .list-view {
     -fx-border-color: #17252A;
     -fx-border-width: 2;
 }
@@ -96,6 +96,16 @@
 
 .doctor_sorting_container RadioButton FontAwesomeIconView {
     -fx-fill: #17252A;
+}
+
+.doctor_cards .list-view {
+    -fx-background-color: #F5F7F8;
+    -fx-border-width: 0;
+}
+
+.doctor_cards .list-cell {
+    -fx-background-color: #F5F7F8;
+    -fx-spacing: 10 5 10 5;
 }
 
 /* Add Doctor Button */

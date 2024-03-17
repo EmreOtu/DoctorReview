@@ -51,5 +51,7 @@ public class HeaderController implements Initializable {
         Stage stage = (Stage) home_btn.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
         Model.getInstance().getViewFactory().showLoginPage();
+
+        Model.getInstance().setUserLoginSuccessFlag(false);
     }
 }

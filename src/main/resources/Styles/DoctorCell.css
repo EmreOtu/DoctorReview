@@ -9,26 +9,22 @@
     -fx-fill: #17252A;
 }
 
-.doctor_cell_container HBox {
-    -fx-spacing: 15;
-    -fx-alignment: center_left;
-    -fx-background-color: #FEFFFF;
-    -fx-padding: 0 0 0 10;
-}
-
-.doctor_cell_container HBox Label {
+.doctor_cell_container Label {
     -fx-font-family: Calibri;
     -fx-text-fill: #17252A;
     -fx-font-size: 18;
     -fx-wrap-text: true;
 }
 
-.doctor_cell_container HBox Line {
+.doctor_cell_container Line {
     -fx-stroke: #AAAAAA;
 }
 
 .spec_lbl {
     -fx-font-family: "Calibri Light";
+    -fx-font-size: 15;
+    -fx-pref-height: 60;
+    -fx-wrap-text: true;
 }
 
 .total_view_lbl {

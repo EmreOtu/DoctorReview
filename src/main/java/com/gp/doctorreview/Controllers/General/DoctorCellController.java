@@ -23,6 +23,9 @@ public class DoctorCellController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        name_lbl.textProperty().bind(doctor.nameProperty());
+        spec_lbl.textProperty().bind(doctor.specializationProperty());
+        review_point_lbl.textProperty().bind(doctor.reviewPointProperty().asString());
+        total_view_lbl.textProperty().bind(doctor.totalViewerProperty().asString());
     }
 }
